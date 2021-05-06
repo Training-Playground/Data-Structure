@@ -17,8 +17,18 @@ public class Queue {
 
         }
     }
+    //FIFO - First In First Out
     public void dequeue(){
-
+        if(numQueue == null){
+            System.out.println("No Dequeuing ---> Empty Array");
+            return;
+        }else{
+            int temp[] = new int[numQueue.length-1];
+            for (int i = 0; i < numQueue.length-1; i++) {
+                temp[i] = numQueue[i+1];
+            }
+            numQueue = temp;
+        }
     }
     public boolean empty(){
         return false;

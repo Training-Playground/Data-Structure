@@ -8,6 +8,13 @@ public class QueueTest {
         queue.print();
         queue.enqueue(30);
         queue.print();
-
+        queue.dequeue();
+        queue.print();
+        queue.dequeue();
+        queue.print();
+        queue.dequeue();
+        queue.print();
+        queue.dequeue();
+        queue.print();
     }
 }
