@@ -1,4 +1,6 @@
 public class Queue {
+
+    int[] numQueue;
     public void enqueue(int number){
 
     }
@@ -15,7 +17,7 @@ public class Queue {
 
     }
     public void print(){
-
+        System.out.println(numQueue);
     }
     public boolean contains(int number){
         return false;
