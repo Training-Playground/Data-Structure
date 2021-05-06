@@ -22,6 +22,9 @@ public class Queue {
         if(numQueue == null){
             System.out.println("No Dequeuing ---> Empty Array");
             return;
+        }else if(numQueue.length==1){
+            numQueue=null;
+            return;
         }else{
             int temp[] = new int[numQueue.length-1];
             for (int i = 0; i < numQueue.length-1; i++) {
