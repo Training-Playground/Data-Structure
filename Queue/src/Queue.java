@@ -34,10 +34,15 @@ public class Queue {
         }
     }
     public boolean empty(){
-        return false;
+
+        return numQueue == null;
     }
     public int peek(){
-        return 0;
+        if(numQueue==null){
+            System.out.println("Empty Array");
+            //can't return a null in a integer return expected method
+        }
+        return numQueue[0];
     }
     public void clear(){
 
