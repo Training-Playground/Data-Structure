@@ -1,8 +1,21 @@
+import java.util.Arrays;
+
 public class Queue {
 
     int[] numQueue;
     public void enqueue(int number){
+        if(numQueue==null){
+            numQueue = new int[1];
+            numQueue[0] = number;
+        }else{
+            int temp[] = new int[numQueue.length+1];
+            for (int i = 0; i < numQueue.length; i++) {
+                temp[i] = numQueue[i];
+            }
+            temp[numQueue.length] = number;
+            numQueue = temp;
 
+        }
     }
     public void dequeue(){
 
@@ -17,7 +30,7 @@ public class Queue {
 
     }
     public void print(){
-        System.out.println(numQueue);
+        System.out.println(Arrays.toString(numQueue));
     }
     public boolean contains(int number){
         return false;
