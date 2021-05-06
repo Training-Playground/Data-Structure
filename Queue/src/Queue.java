@@ -45,15 +45,23 @@ public class Queue {
         return numQueue[0];
     }
     public void clear(){
-
+        numQueue = null;
     }
     public void print(){
         System.out.println(Arrays.toString(numQueue));
     }
     public boolean contains(int number){
+        if(numQueue==null){
+            return false;
+        }else{
+            for (int i = 0; i < numQueue.length; i++) {
+                if(numQueue[i] == number)
+                    return true;
+            }
+        }
         return false;
     }
     public int size(){
-        return 0;
+        return numQueue.length;
     }
 }

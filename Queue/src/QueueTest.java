@@ -9,6 +9,8 @@ public class QueueTest {
         queue.print();
         queue.enqueue(30);
         queue.print();
+        System.out.println(queue.contains(30));
+        System.out.println(queue.contains(50));
         System.out.println(queue.peek());
         queue.empty();
         System.out.println(queue.empty());
@@ -20,8 +22,15 @@ public class QueueTest {
         queue.print();
         queue.dequeue();
         queue.print();
+        System.out.println(queue.contains(30));
         //System.out.println(queue.peek());
         queue.enqueue(30);
         queue.print();
+        System.out.println(queue.contains(30));
+        System.out.println(queue.contains(50));
+        System.out.println(queue.size());
+        queue.enqueue(20);
+        queue.enqueue(10);
+        System.out.println(queue.size());
     }
 }
