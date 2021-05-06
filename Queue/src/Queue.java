@@ -37,6 +37,7 @@ public class Queue {
 
         return numQueue == null;
     }
+    //According to FIFO, assumed the peek is the front number
     public int peek(){
         if(numQueue==null){
             System.out.println("Empty Array");
@@ -48,7 +49,15 @@ public class Queue {
         numQueue = null;
     }
     public void print(){
-        System.out.println(Arrays.toString(numQueue));
+        System.out.print("[");
+        if(numQueue==null){
+            System.out.println("]");
+            return;
+        }
+        for (int i = 0; i < numQueue.length; i++) {
+            System.out.print(numQueue[(numQueue.length-1-i)]+", ");
+        }
+        System.out.println("\b\b]");
     }
     public boolean contains(int number){
         if(numQueue==null){
