@@ -77,6 +77,15 @@ public class Deque{
         if(numQueue==null){
             numQueue = new int[1];
             numQueue[0] = number;}
+        else{
+            int temp[] = new int[numQueue.length+1];
+            for (int i = 0; i < numQueue.length; i++) {
+                temp[i+1] = numQueue[i];
+            }
+            temp[0] = number;
+            numQueue = temp;
+
+        }
 
 
     }
