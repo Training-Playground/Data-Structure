@@ -1,8 +1,10 @@
+package ds;
+
 import java.util.Arrays;
 
 public class Queue {
 
-    private int[] numQueue;
+    int[] numQueue;
     public void enqueue(int number){
         if(numQueue==null){
             numQueue = new int[1];
