@@ -20,8 +20,9 @@ public class QueueTest {
         queue.print();
         queue.dequeue();
         queue.print();
-        queue.dequeue();
+        queue.clear(); //Array becomes null
         queue.print();
+        System.out.println(queue.peek()); //Prints the message "Empty Array" but doesnt execute after
         System.out.println(queue.contains(30));
         //System.out.println(queue.peek());
         queue.enqueue(30);

@@ -37,13 +37,14 @@ public class Queue {
 
         return numQueue == null;
     }
-    //According to FIFO, assumed the peek is the front number
+
     public int peek(){
         if(numQueue==null){
             System.out.println("Empty Array");
             //can't return a null in a integer return expected method
         }
-        return numQueue[0];
+        //return numQueue[0]; //Wrong
+        return numQueue[numQueue.length-1];
     }
     public void clear(){
         numQueue = null;
