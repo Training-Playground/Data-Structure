@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Queue {
 
-    int[] numQueue;
+    protected int[] numQueue;
     public void enqueue(int number){
         if(numQueue==null){
             numQueue = new int[1];
