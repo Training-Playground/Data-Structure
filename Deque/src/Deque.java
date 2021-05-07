@@ -74,9 +74,19 @@ public class Deque{
         return numQueue.length;
     }
     public void enqueueRear(int number){
+        if(numQueue==null){
+            numQueue = new int[1];
+            numQueue[0] = number;}
+
 
     }
-    public void dequeueRear(){
-
+    public void dequeueFront(){
+        if(numQueue == null){
+            System.out.println("No Dequeuing from Front ---> Empty Array");
+            return;
+        }else if(numQueue.length==1){
+            numQueue=null;
+            return;
+        }
     }
 }
