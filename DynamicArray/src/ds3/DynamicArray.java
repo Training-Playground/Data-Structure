@@ -19,7 +19,20 @@ public class DynamicArray {
         }
     }
     public void add(int index,int number){
+        if(empty()){
 
+        }else if{
+            int temp[] = new int[numArray.length+1];
+            for (int i = 0; i < numArray.length; i++) {
+                for (int j = 0; j < index; j++) {
+                    temp[j] =numArray[j];
+                }
+                for (int j = index; j < numArray.length; j++) {
+                    temp[i+1] = numArray[i];
+                }
+            }
+            temp[index] = number;
+        }
     }
     public void remove(int index){
 
@@ -39,7 +52,7 @@ public class DynamicArray {
     public boolean contains(int number){
         return false;
     }
-    public void empty(){
-
+    public boolean empty(){
+        return numArray == null;
     }
 }
