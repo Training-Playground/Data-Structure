@@ -59,7 +59,7 @@ public class DynamicArray {
         }
     }
     public int get(int index){
-        return 0;
+        return numArray[index];
     }
     public void print(){
         System.out.println(Arrays.toString(numArray));
@@ -71,6 +71,14 @@ public class DynamicArray {
         return numArray.length;
     }
     public boolean contains(int number){
+        if(numArray==null){
+            return false;
+        }else{
+            for (int i = 0; i < numArray.length; i++) {
+                if(numArray[i] == number)
+                    return true;
+            }
+        }
         return false;
     }
     public boolean empty(){
