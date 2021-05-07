@@ -47,6 +47,16 @@ public class DynamicArray {
             System.out.println("Empty Array");
         }
         int temp[] = new int[numArray.length-1];
+        for (int i = 0; i < numArray.length-1; i++) {
+            for (int j = 0; j < index; j++) {
+                temp[j] = numArray[j];
+            }
+            for (int j = index; j < numArray.length-1; j++) {
+                temp[j]=numArray[j+1];
+            }
+            numArray = temp;
+
+        }
     }
     public int get(int index){
         return 0;
@@ -55,10 +65,10 @@ public class DynamicArray {
         System.out.println(Arrays.toString(numArray));
     }
     public void clear(){
-
+        numArray=null;
     }
     public int size(){
-        return 0;
+        return numArray.length;
     }
     public boolean contains(int number){
         return false;
