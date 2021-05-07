@@ -97,5 +97,12 @@ public class Deque{
             numQueue=null;
             return;
         }
+        else{
+            int temp[] = new int[numQueue.length-1];
+            for (int i = 0; i < numQueue.length-1; i++) {
+                temp[i] = numQueue[i];
+            }
+            numQueue = temp;
+        }
     }
 }

@@ -10,5 +10,7 @@ public class DequeTest {
         deque.print();
         deque.enqueueRear(40);
         deque.print();
+        deque.dequeueFront();
+        deque.print();
     }
 }
