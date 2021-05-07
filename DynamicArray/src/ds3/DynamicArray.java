@@ -20,8 +20,15 @@ public class DynamicArray {
     }
     public void add(int index,int number){
         if(empty()){
+            /*if(index == 0){
+                numArray[0]=number;
+                return;
 
-        }else if{
+            }else{*/
+                System.out.println("Error");
+
+
+        }else{
             int temp[] = new int[numArray.length+1];
             for (int i = 0; i < numArray.length; i++) {
                 for (int j = 0; j < index; j++) {
@@ -32,10 +39,14 @@ public class DynamicArray {
                 }
             }
             temp[index] = number;
+            numArray = temp;
         }
     }
     public void remove(int index){
-
+        if(empty()){
+            System.out.println("Empty Array");
+        }
+        int temp[] = new int[numArray.length-1];
     }
     public int get(int index){
         return 0;
