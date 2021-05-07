@@ -16,7 +16,7 @@ public class Deque{
 
         }
     }
-    //FIFO - First In First Out
+
     public void dequeue(){
         if(numQueue == null){
             System.out.println("No Dequeuing ---> Empty Array");
@@ -72,5 +72,11 @@ public class Deque{
     }
     public int size(){
         return numQueue.length;
+    }
+    public void enqueueRear(int number){
+
+    }
+    public void dequeueRear(){
+
     }
 }
